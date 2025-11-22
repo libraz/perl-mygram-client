@@ -1,0 +1,18 @@
+TYPEMAP
+MygramDB::Client::XS    T_PTROBJ
+MygramDB__Client        T_PTROBJ
+
+INPUT
+T_PTROBJ
+    if (sv_derived_from($arg, \"MygramDB::Client::XS\")) {
+        IV tmp = SvIV((SV*)SvRV($arg));
+        $var = INT2PTR($type, tmp);
+    }
+    else
+        Perl_croak(aTHX_ \"%s: %s is not of type %s\",
+                   ${$ALIAS?\q[GvNAME(CvGV(cv))]:\qq[\"$pname\"]},
+                   \"$var\", \"MygramDB::Client::XS\");
+
+OUTPUT
+T_PTROBJ
+    sv_setref_pv($arg, \"MygramDB::Client::XS\", (void*)$var);

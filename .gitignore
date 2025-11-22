@@ -1,0 +1,45 @@
+# Perl build artifacts
+Makefile
+Makefile.old
+blib/
+pm_to_blib
+MYMETA.*
+META.yml
+META.json
+
+# XS build artifacts
+Client.c
+Client.o
+*.bs
+*.bundle
+
+# Embedded source object files
+src/*.o
+
+# Distribution
+MygramDB-Client-*.tar.gz
+
+# Editor files
+*~
+*.swp
+.*.swp
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+.claude/
+CLAUDE.md
+
+# Temporary scripts and reports (generated)
+fix-includes.sh
+
+# Test coverage
+cover_db/
+*.gcov
+*.gcda
+*.gcno
+
+# Backup files
+*.bak
+*.old

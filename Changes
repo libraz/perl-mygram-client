@@ -1,0 +1,11 @@
+Revision history for Perl module MygramDB::Client
+
+0.01  2025-01-20
+    - Initial release
+    - Pure Perl implementation with full MygramDB protocol support
+    - XS implementation with C bindings to libmygramclient
+    - Support for SEARCH, COUNT, GET, INFO commands
+    - Unicode/UTF-8 support
+    - Connection management and error handling
+    - Comprehensive test suite
+    - Example scripts and documentation
